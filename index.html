@@ -7,13 +7,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     
     <style>
-        /* 🎨 Variables pour le Dark Mode */
+        /* 🎨 Variables pour le Nouveau Thème (Bleu Profond & Orange Électrique) */
         :root {
-            --primary-color: #00ffc8; /* Cyan - Couleur d'accentuation vive */
-            --secondary-color: #f0f0f0; /* Texte clair */
-            --background-color: #121212; /* Arrière-plan très sombre */
-            --card-color: #1f1f1f; /* Fond des blocs et cartes */
-            --border-color: #333333; /* Lignes de séparation subtiles */
+            --primary-color: #ff6600; /* Orange Électrique - Couleur d'accentuation */
+            --secondary-color: #e0e0e0; /* Texte clair */
+            --background-color: #0d1a26; /* Bleu très foncé / Profond */
+            --card-color: #1a293a; /* Fond des blocs et cartes (Anthracite/Bleu-gris) */
+            --border-color: #384e63; /* Lignes de séparation subtiles */
             --font-family: 'Inter', sans-serif;
             --section-padding: 60px 8%;
         }
@@ -98,6 +98,7 @@
             justify-content: center;
             align-items: center;
             text-align: center;
+            /* Utilisation d'une couleur de fond de carte légèrement différente pour le Héro */
             background: var(--card-color);
         }
         .hero h1 {
@@ -135,7 +136,7 @@
             font-size: 1.1rem;
         }
         .about-content p strong {
-            color: var(--primary-color); /* Mise en évidence des spécialités */
+            color: var(--primary-color);
         }
         .about-content ul {
             list-style: none;
@@ -146,7 +147,7 @@
             padding: 5px 0;
         }
         .about-content ul li::before {
-            content: "📍"; /* Utilisation d'un emoji */
+            content: "📍";
             color: var(--primary-color);
             font-weight: 700;
             margin-right: 10px;
@@ -162,7 +163,8 @@
             background: var(--card-color);
             padding: 25px;
             border: 1px solid var(--border-color);
-            box-shadow: 0 0 5px rgba(0, 255, 200, 0.1);
+            /* Nouveau style d'ombre cohérent avec l'accentuation */
+            box-shadow: 0 0 8px rgba(255, 102, 0, 0.2); 
         }
         .skill-category ul {
             list-style: none;
@@ -170,7 +172,7 @@
         }
         .skill-category ul li {
             margin-bottom: 8px;
-            color: #ccc;
+            color: #c0c0c0; /* Légèrement plus foncé que secondary-color */
         }
         .skill-category ul li::before {
             content: "•";
@@ -192,15 +194,16 @@
             position: relative;
         }
         .timeline-item::before {
-            content: ""; /* Base */
+            /* Base (non utilisée pour les items formation/experience) */
+            content: "";
             position: absolute;
-            left: -8px; /* Positionnement du point sur la ligne */
+            left: -8px; 
             top: 15px;
             width: 15px;
             height: 15px;
             border-radius: 50%;
             background: var(--primary-color);
-            border: 2px solid var(--background-color); /* Effet d'anneau autour */
+            border: 2px solid var(--background-color); 
         }
         .timeline-item.formation::before {
             content: "🎓";
@@ -210,7 +213,7 @@
             left: -15px;
             top: 10px;
             border-radius: 50%;
-            background: var(--background-color);
+            background: var(--card-color); /* Utiliser card-color ici pour le contraste */
             border: 3px solid var(--primary-color);
             display: flex;
             justify-content: center;
@@ -224,7 +227,7 @@
             left: -15px;
             top: 10px;
             border-radius: 50%;
-            background: var(--background-color);
+            background: var(--card-color); /* Utiliser card-color ici pour le contraste */
             border: 3px solid var(--primary-color);
             display: flex;
             justify-content: center;
@@ -254,7 +257,7 @@
             margin-bottom: 5px;
         }
         .project-card p {
-            color: #ccc;
+            color: #c0c0c0;
             margin-bottom: 10px;
         }
         .project-card ul {
@@ -360,7 +363,7 @@
         <div class="hero-content">
             <h1>HEUSSIEU SIEBANOU Allan Yannis</h1>
             <p class="hero-subtitle">Étudiant Informatique & IA (Réseaux & Sécurité)</p>
-            <p style="color: #aaa; margin-top: 5px;">📍 Cameroun • Passionné par la Sécurité et la Téléphonie IP</p>
+            <p style="color: #c0c0c0; margin-top: 5px;">📍 Cameroun • Passionné par la Sécurité et la Téléphonie IP</p>
         </div>
         <div class="contact-links">
             <a href="mailto:allanyann647@gmail.com" target="_blank">E-mail</a>
@@ -408,3 +411,112 @@
             
             <div class="timeline-item experience">
                 <p>SATI SARL — Stage / Expérience Professionnelle</p>
+                <small>Détails sur la période de l'expérience</small>
+                <ul style="margin-top: 10px; font-size: 1rem;">
+                    <li>Réalisation d’activités de support informatique</li>
+                    <li>Intervention sur des équipements et infrastructures réseau</li>
+                    <li>Gestion de configurations de base Cisco</li>
+                    <li>Initiation à la téléphonie sur IP</li>
+                    <li>Maintenance et suivi technique des systèmes</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="competences">
+        <h2>🛠 Compétences Clés</h2>
+        <div class="skills-grid">
+            
+            <div class="skill-category">
+                <h3>🌐 Réseaux & Sécurité</h3>
+                <ul>
+                    <li>Cisco (routage, commutation)</li>
+                    <li>Notions CCNA</li>
+                    <li>Téléphonie sur IP (Trixbox, Asterisk)</li>
+                    <li>Connaissance des architectures réseau</li>
+                    <li>Bases en cybersécurité</li>
+                </ul>
+            </div>
+            
+            <div class="skill-category">
+                <h3>🤖 Électronique & Programmation</h3>
+                <ul>
+                    <li>Arduino : capteurs, microcontrôleurs</li>
+                    <li>Petits montages électroniques</li>
+                </ul>
+            </div>
+            
+            <div class="skill-category">
+                <h3>📝 Bureautique & Outils</h3>
+                <ul>
+                    <li>Microsoft Word (bon niveau)</li>
+                    <li>Notions d’Excel</li>
+                    <li>Git & GitHub</li>
+                    <li>Documentation et organisation technique</li>
+                </ul>
+            </div>
+            
+        </div>
+    </section>
+
+    <section id="projets">
+        <h2>🧰 Projet Réalisé</h2>
+        <p>Ce projet met en évidence mon application pratique des compétences en réseau et téléphonie sur IP.</p>
+        
+        <div class="project-card">
+            <h3>📞 Mise en place d’un système de téléphonie IP avec Trixbox</h3>
+            <p>Conception et déploiement d'une solution VoIP pour un usage interne.</p>
+            <ul>
+                <li>Étude des besoins d’un bâtiment</li>
+                <li>Conception d’un réseau VoIP interne</li>
+                <li>Installation et configuration de Trixbox</li>
+                <li>Création et gestion des extensions et utilisateurs</li>
+                <li>Tests de communication interne et analyse des performances</li>
+            </ul>
+            <a href="#" target="_blank">Lien vers le Projet (Rapport/Détails) →</a>
+            <span>(URL à ajouter)</span>
+        </div>
+        
+    </section>
+
+    <section>
+        <h2>🌍 Langues & Intérêts</h2>
+        <div class="interets-langues">
+            <div class="langues">
+                <h3>🗣 Langues</h3>
+                <ul>
+                    <li>🇫🇷 Français — Courant</li>
+                    <li>🇬🇧 Anglais — Intermédiaire</li>
+                </ul>
+            </div>
+            <div class="interets">
+                <h3>❤ Centres d’intérêt</h3>
+                <ul>
+                    <li>⚽ Football</li>
+                    <li>📚 Lecture</li>
+                    <li>🌍 Culture générale</li>
+                    <li>💡 Nouvelles technologies</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" style="text-align: center;">
+        <h2>📬 Contact & Collaboration</h2>
+        <p>Merci de votre visite ! N’hésitez pas à me contacter pour échanger ou collaborer.</p>
+        <p style="margin-top: 15px; color: var(--primary-color);">*Email : allanyann647@gmail.com* | *Téléphone : +237 693 065 632*</p>
+        
+        <div class="contact-links" style="margin-top: 30px;">
+            <a href="mailto:allanyann647@gmail.com" class="btn" style="background: none; color: var(--primary-color); border: 2px solid var(--primary-color);">Email Direct</a>
+            <a href="tel:+237693065632" class="btn" style="background-color: var(--primary-color); color: var(--background-color);">Appeler</a>
+        </div>
+        
+        <p style="margin-top: 40px; color: #aaa;">⭐ Merci de votre visite ! N’hésitez pas à explorer mes projets.</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 HEUSSIEU SIEBANOU Allan Yannis. Réalisé en HTML/CSS Single File.</p>
+    </footer>
+
+</body>
+</html>
